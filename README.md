@@ -1,5 +1,6 @@
-# github-touch.github.io
-Use github API easily with github-touch
+# github-touch - <img src="https://img.shields.io/npm/v/github-touch.svg?maxAge=3600" alt="version"><img src="https://img.shields.io/npm/dt/github-touch.svg?maxAge=3600" alt="download">
+[docs](https://githubtouch.js.org) (waiting)
+[npm](https://npmjs.com/package/github-touch)
 
 # quick docs
 
