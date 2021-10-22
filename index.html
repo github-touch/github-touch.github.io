@@ -1,34 +1,147 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html><head>
 	<meta charset="utf-8">
 
 	<!-- Web title -->
-	<title>My Website</title>
+	<title>github-touch</title>
 
 	<!-- Web Responsive -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- Web SEO -->
-	<meta name="title" content="My Website">
-	<meta name="description" content="My Website Description">
+	<meta name="title" content="github-touch">
+	<meta name="description" content="github-touch documentations">
 
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://mysite.com/">
-	<meta property="og:title" content="My Website">
-	<meta property="og:description" content="My Website Description">
-	<meta property="og:image" content="./img/logo.png">
+	<meta property="og:url" content="https://github-touch.github.io">
+	<meta property="og:title" content="github-touch">
+	<meta property="og:description" content="github-touch documentations">
+	<meta property="og:image" content="./assets/github-touch-logo.png">
 
-	<meta property="twitter:url" content="https://mysite.com/">
-	<meta property="twitter:title" content="My Website">
-	<meta property="twitter:description" content="My Website Description">
-	<meta property="twitter:image" content="./img/logo.png">
+	<meta property="twitter:url" content="https://github-touch.github.io">
+	<meta property="twitter:title" content="github-touch">
+	<meta property="twitter:description" content="github-touch documentations">
+	<meta property="twitter:image" content="./assets/github-touch-logo.png">
 
 	<!-- Web Style -->
-	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+	<link rel="stylesheet" type="text/css" href="./styles.css">
+	<link rel="stylesheet" href="./highlight/highlight.css">
 </head>
 <body>
-	<!-- Code -->
-	<h1>Hello world!</h1>
+	<div class="container">
+		<div class="pg">
+			<img class="pg-logo" src="./assets/github-touch-logo.png" alt="github touch logo">
+			<h1 class="pg-title">github-touch - <img src="https://img.shields.io/npm/v/github-touch.svg?maxAge=3600" alt="version"><img src="https://img.shields.io/npm/dt/github-touch.svg?maxAge=3600" alt="download"></h1>
+			<p class="pg-description">Use github API with github-touch</p>		
+		</div>
+		<hr>
+
+		<ol>
+			<li><a href="https://npmjs.com/package/github-touch" target="_blank">npm</a></li>
+			<li><a href="#installation">installation</a></li>
+			<li><a href="#docs">documentations</a></li>
+			<li><a href="#example">example</a></li>
+		</ol>
+
+		<hr>
+
+		<div class="docs-item">
+			<h2 id="installation" class="required">Installation</h2>
+			<p>you must install <span class="mark">github-touch</span> first via npm package and call <span class="mark">github-touch</span> - read <a href="#example">this</a></p>
+			<pre><code class="hljs language-css">npm <span class="hljs-selector-tag">i</span> github-touch</code></pre>
+			<pre><code class="language-javascript hljs"><span class="hljs-keyword">const</span> <span class="hljs-title class_">GithubTouch</span> = <span class="hljs-built_in">require</span>(<span class="hljs-string">"github-touch"</span>)</code></pre>
+		</div>
+
+		<hr>
+
+		<div class="docs-item">
+			<h2 id="docs">Documentations</h2>
+			<div class="docs-info">
+				<h3 class="docs-title">.searchTopic()</h3>
+				<p class="docs-description">search any topic in github</p>
+				<div class="docs-about">
+					<h4 class="docs-about-item">parameters: Query</h4>
+					<h4 class="docs-about-item">return: JSON</h4>
+				</div>
+				<pre><code class="language-javascript">.searchTopic('github')</code></pre>
+			</div>			
+			<div class="docs-info">
+				<h3 class="docs-title top">.getUser()</h3>
+				<p class="docs-description">get a github user information</p>
+				<div class="docs-about">
+					<h4 class="docs-about-item">parameters: Username</h4>
+					<h4 class="docs-about-item">return: Object</h4>
+				</div>
+				<pre><code class="language-javascript">.getUser('Vins2106')</code></pre>
+			</div>
+			<div class="docs-info">
+				<h3 class="docs-title">.getUserRepos()</h3>
+				<p class="docs-description">get a user repositories</p>
+				<div class="docs-about">
+					<h4 class="docs-about-item">parameters: Username, ?RepoName</h4>
+					<h4 class="docs-about-item">return: JSON, ?Object</h4>
+				</div>
+				<pre><code class="language-javascript">.getUserRepos('Vins2106')</code></pre>
+			</div>
+			<div class="docs-info">
+				<h3 class="docs-title">.getUserGists()</h3>
+				<p class="docs-description">get a user gists</p>
+				<div class="docs-about">
+					<h4 class="docs-about-item">parameters: Username, ?GistId</h4>
+					<h4 class="docs-about-item">return: JSON, ?Object</h4>
+				</div>
+				<pre><code class="language-javascript">.getUserGists('Vins2106')</code></pre>
+			</div>
+			<div class="docs-info">
+				<h3 class="docs-title top">.getOrg()</h3>
+				<p class="docs-description">get a github organization</p>
+				<div class="docs-about">
+					<h4 class="docs-about-item">parameters: OrganizationName</h4>
+					<h4 class="docs-about-item">return: Object</h4>
+				</div>
+				<pre><code class="language-javascript">.getOrg(bellshade')</code></pre>
+			</div>
+			<div class="docs-info">
+				<h3 class="docs-title">.getOrgRepos()</h3>
+				<p class="docs-description">get a github organization repositories</p>
+				<div class="docs-about">
+					<h4 class="docs-about-item">parameters: OrganizationName, ?RepoName</h4>
+					<h4 class="docs-about-item">return: JSON, Object</h4>
+				</div>
+				<pre><code class="language-javascript">.getOrgRepos('bellshade')</code></pre>
+			</div>
+			<div class="docs-info">
+				<h3 class="docs-title disable">.getOrgTeams()</h3>
+				<p class="docs-description">get a github organization teams</p>
+				<div class="docs-about">
+					<h4 class="docs-about-item">parameters: OrganizationName</h4>
+					<h4 class="docs-about-item">return: JSON</h4>
+				</div>
+				<pre><code class="language-javascript">.getOrgTeams('bellshade')</code></pre>
+			</div>
+		</div>	
+
+		<hr>
+
+		<div class="docs-item">
+			<h2 id="example">Example</h2>
+			<div class="docs-img">
+				<img src="./assets/example.svg" alt="example" class="example-img">
+			</div>
+		</div>	
+
+		<hr>
+
+		<div class="docs-item">
+			<h4 id="footer">make with LOVE by <a href="https://github.com/Vins2106">Vins2106</a> - <a href="https://github.com/github-touch">github</a> - <a href="https://saweria.co/Vins2106">donation</a></h4>
+		</div>
+	</div>
+
+	<!-- script -->
+	<script src="./highlight/highlight.js"></script>
+	<script>
+		hljs.highlightAll();
+	</script>
+
 </body>
 </html>
