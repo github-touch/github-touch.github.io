@@ -1,6 +1,6 @@
 {
   "name": "github-touch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use github API easily with github-touch",
   "main": "cdn.js",
   "scripts": {
