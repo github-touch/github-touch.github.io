@@ -76,3 +76,5 @@ get a github organization teams
 ```js
 .getOrgTeams('bellshade')
 ```
+
+> Thanks to [js.org](https://github.com/js-org/js.org)
