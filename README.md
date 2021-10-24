@@ -1,6 +1,7 @@
 # github-touch - <img src="https://img.shields.io/npm/v/github-touch.svg?maxAge=3600" alt="version"><img src="https://img.shields.io/npm/dt/github-touch.svg?maxAge=3600" alt="download">
 [docs](https://githubtouch.js.org)
 [npm](https://npmjs.com/package/github-touch)
+> Thanks to [js.org](https://github.com/js-org/js.org)
 
 # quick docs
 
@@ -76,5 +77,3 @@ get a github organization teams
 ```js
 .getOrgTeams('bellshade')
 ```
-
-> Thanks to [js.org](https://github.com/js-org/js.org)
